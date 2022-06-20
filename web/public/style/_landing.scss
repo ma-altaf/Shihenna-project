@@ -1,0 +1,119 @@
+.indexPage {
+    .landing {
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100vw;
+        height: 84vh;
+
+        .introPara {
+            font-size: 1.25rem;
+            position: absolute;
+            width: fit-content;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            .h2Placeholder {
+                overflow: hidden;
+                h2 {
+                    color: $secondaryColor !important;
+                }
+            }
+        }
+
+        .right {
+            position: relative;
+            pointer-events: none;
+        }
+
+        .left {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .founder {
+            position: relative;
+            top: 50%;
+            left: 50%;
+            border-radius: 5%;
+            height: 350px;
+            width: 350px;
+            transform: translate(-50%, -50%) rotateZ(45deg);
+            background-color: $accentColor;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+
+            .image {
+                width: 100%;
+                height: 100%;
+                background-image: url("../images/profilePic.jpg");
+                transform: rotateZ(-45deg) scale(2);
+                background-size: cover;
+            }
+            .cover {
+                position: absolute;
+                z-index: 10;
+                width: 100%;
+                height: 100%;
+                background-color: $primaryColor;
+            }
+        }
+
+        .cta {
+            overflow: hidden;
+            margin-top: 1em;
+            background-color: $primaryColor;
+            color: $accentColor;
+            padding: 1rem 2rem;
+            width: fit-content;
+            border-radius: 2rem;
+            border-color: $accentColor;
+            border-style: solid;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: large;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                background-color: $accentColor;
+                color: $primaryColor;
+            }
+        }
+    }
+
+    .scrollerAnim {
+        width: 100%;
+        height: 8vh;
+        display: flex;
+        justify-content: center;
+        position: relative;
+
+        .scrollerBox {
+            overflow: hidden;
+            border-radius: 6px;
+            border-style: solid;
+            border-width: 2px;
+            border-color: $accentColor;
+            position: relative;
+            height: 26px;
+            width: 12px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+
+            .scollerContent {
+                position: absolute;
+                bottom: -16px;
+                border-radius: 5px;
+                height: 10px;
+                width: 10px;
+                background-color: $accentColor;
+            }
+        }
+    }
+}

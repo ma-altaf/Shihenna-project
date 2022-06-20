@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link
+            rel="shortcut icon"
+            href="images/favicon.ico"
+            type="image/x-icon"
+        />
+
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Contact 💬</title>
+        <link rel="stylesheet" href="./style/style.css" />
+        <link rel="stylesheet" href="./style/contact.css" />
+    </head>
+    <body class="contactPage" onload="contactEntrance()">
+        <div class="loader">
+            <div class="loadingGif">
+                <div class="loadingGifInner"></div>
+            </div>
+        </div>
+
+        <div class="cursor"></div>
+
+        <div class="title">
+            <h3 class="back" onclick="back()"><</h3>
+            <h3>social</h3>
+        </div>
+
+        <div class="socialLinksBlock">
+            <a
+                class="socialLink"
+                href="https://www.facebook.com/shihennaartist/"
+                target="_blank"
+            >
+                <p class="text">Facebook</p>
+                <div class="linkCover">
+                    <p id="facebook">shihennaartist</p>
+                </div>
+            </a>
+            <a
+                class="socialLink"
+                href="https://www.instagram.com/shi_henna_artist/"
+                target="_blank"
+            >
+                <p class="text">Instagram</p>
+                <div class="linkCover">
+                    <p id="instagram">shi_henna_artist</p>
+                </div>
+            </a>
+            <a
+                class="socialLink"
+                href="https://wa.me/23058241503"
+                target="_blank"
+            >
+                <p class="text">WhatsApp</p>
+                <div class="linkCover">
+                    <p id="whatsapp">+230 5824 1503</p>
+                </div>
+            </a>
+            <a
+                class="socialLink"
+                onclick="copyEmail()"
+                href="mailto:example@email.com"
+            >
+                <p class="text">Email</p>
+                <div class="linkCover"><p id="email">example@email.com</p></div>
+            </a>
+            <!-- TODO: change to gmap location -->
+            <a
+                class="socialLink"
+                href="https://www.google.com/maps/"
+                target="_blank"
+            >
+                <p class="text">In-Person</p>
+                <div class="linkCover"><p id="inPerson">location</p></div>
+            </a>
+        </div>
+    </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
+    <script src="./script/script.js"></script>
+    <script src="./script/contact.js"></script>
+</html>

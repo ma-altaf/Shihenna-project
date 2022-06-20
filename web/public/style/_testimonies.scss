@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap");
+
+.indexPage .testimonies {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+
+    .topSection {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: fit-content;
+        .subTitle {
+            transform: scale(2.3);
+            overflow: hidden;
+            margin: 3em;
+            display: flex;
+            justify-content: center;
+
+            h3 {
+                font-size: 20px;
+                margin-left: 5px;
+                margin-right: 5px;
+                margin-bottom: 5px;
+                text-transform: uppercase;
+            }
+            .me {
+                color: $accentColor;
+            }
+            .underline {
+                position: absolute;
+                left: 5px;
+                bottom: 0px;
+                border-radius: 1.5px;
+                height: 3px;
+                width: 85%;
+                background-color: $accentColor;
+            }
+        }
+    }
+
+    .testimonyCards {
+        height: fit-content;
+        .testimonySections {
+            position: relative;
+            width: 100vw;
+            display: flex;
+        }
+
+        .testimonySections:nth-child(2) {
+            flex-direction: row-reverse;
+
+            .comment {
+                left: 35% !important;
+                text-align: right;
+            }
+        }
+
+        .comment {
+            padding: 1em;
+            background-color: white;
+            margin-bottom: 1em;
+            text-align: left;
+            width: 35vw;
+            font-size: 2.3em;
+            font-weight: bold;
+            z-index: 5;
+            position: absolute;
+            top: 50%;
+            left: 30%;
+            transform: translateY(-30%);
+
+            .word {
+                overflow: hidden;
+                display: inline-block;
+                margin-bottom: -0.3em;
+                p {
+                    display: inline-block;
+                }
+            }
+        }
+
+        .nameSection {
+            opacity: 0.3;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 100vw;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+
+            .name {
+                font-family: "Raleway", sans-serif;
+                font-size: 30vh;
+                text-transform: uppercase;
+                line-height: 90%;
+            }
+            .name:nth-child(1) {
+                float: left;
+            }
+            .name:nth-child(2) {
+                float: right;
+            }
+        }
+
+        .Testimonyimage {
+            z-index: 3;
+            width: 30vw;
+            height: 90vh;
+            margin: 3em 5em;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        #testimonyImg1 {
+            background-image: url("../images/testimonyImg1.jpg");
+        }
+        #testimonyImg2 {
+            background-position: 100% 0;
+            background-image: url("../images/testimonyImg2.jpg");
+        }
+        #testimonyImg3 {
+            background-image: url("../images/testimonyImg3.jpg");
+        }
+    }
+}

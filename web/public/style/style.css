@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  cursor: default;
+}
+
+* ::-moz-selection {
+  background: #e29578;
+}
+
+* ::selection {
+  background: #e29578;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  max-width: 100%;
+  overflow-x: hidden;
+  background-color: #f5f5f0;
+  -webkit-transition: background 0.5s ease-out;
+  transition: background 0.5s ease-out;
+}
+
+.loader {
+  position: fixed;
+  z-index: 105;
+  width: 100vw;
+  height: 100vh;
+  background-color: #f5f5f0;
+  left: 0;
+  top: 0;
+  cursor: default;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.loader .loadingGif {
+  overflow: hidden;
+  width: 100px;
+  height: 300px;
+}
+
+.loader .loadingGif .loadingGifInner {
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  background-color: #151515;
+  width: 100px;
+  height: 125px;
+}
+
+ul.transition {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  z-index: 100;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  margin: 0;
+  pointer-events: none;
+}
+
+ul.transition li {
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  background-color: #f5f5f0;
+  width: 20%;
+}
+
+.cursor {
+  overflow: hidden;
+  z-index: 100;
+  position: fixed;
+  left: -10px;
+  top: 0px;
+  width: 7px;
+  height: 7px;
+  pointer-events: none;
+  border: solid 3px;
+  border-color: #151515;
+  border-radius: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: background-color 0.2s ease-in, width 0.2s ease-in, height 0.2s ease-in, border-color 0.2s ease-in;
+  transition: background-color 0.2s ease-in, width 0.2s ease-in, height 0.2s ease-in, border-color 0.2s ease-in;
+}
+
+.click {
+  background-color: #151515;
+  width: 15px;
+  height: 15px;
+  -webkit-transition: background-color 0.1s ease-in, width 0.1s ease-in, height 0.1s ease-in;
+  transition: background-color 0.1s ease-in, width 0.1s ease-in, height 0.1s ease-in;
+}
+
+.grow {
+  border-color: #f5f5f0;
+  background-color: #f5f5f0;
+  mix-blend-mode: difference;
+  width: 60px;
+  height: 60px;
+  -webkit-transition: background-color 0.3s ease-in, width 0.3s ease-in, height 0.3s ease-in;
+  transition: background-color 0.3s ease-in, width 0.3s ease-in, height 0.3s ease-in;
+}
+
+.viewCursor {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 25px;
+  border: solid 1px;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  width: 50px;
+  height: 50px;
+  -webkit-transition: background-color 0.3s ease-in, width 0.3s ease-in, height 0.3s ease-in;
+  transition: background-color 0.3s ease-in, width 0.3s ease-in, height 0.3s ease-in;
+}
+
+.bar-transition {
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  z-index: 101;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: fixed;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.bar-transition li {
+  list-style: none;
+  background-color: #f5f5f0;
+  width: 20%;
+  height: 0%;
+  bottom: 0;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.bar-transition li .transitionLogo {
+  text-align: center;
+  width: 8em;
+  height: 8em;
+  color: #e29578;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  .bar-transition li {
+    width: 0;
+  }
+  .bar-transition li:nth-child(3) {
+    width: 100vw !important;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .cursor {
+    display: none;
+  }
+  * {
+    cursor: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */

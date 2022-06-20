@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link
+            rel="shortcut icon"
+            href="images/favicon.ico"
+            type="image/x-icon"
+        />
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="preload" as="style" href="./style/style.css" />
+        <link rel="preload" as="style" href="./style/gallery.css" />
+        <link rel="preload" as="script" href="./script/script.js" />
+        <link rel="preload" as="script" href="./script/gallery.js" />
+        <link rel="stylesheet" href="./style/style.css" />
+        <link rel="stylesheet" href="./style/gallery.css" />
+        <title>Designs 🎨</title>
+    </head>
+    <body class="galleryPage" onload="GalleryEntrance()">
+        <div class="loader">
+            <div class="loadingGif">
+                <div class="loadingGifInner"></div>
+            </div>
+        </div>
+
+        <div class="cursor"></div>
+
+        <div class="title">
+            <h3 class="back" onclick="back()"><</h3>
+            <h3>designs</h3>
+        </div>
+
+        <div class="category">
+            <ul>
+                <li>
+                    <a>casual</a>
+                    <div class="underline"></div>
+                </li>
+                <li>
+                    <a>bridal</a>
+                    <div class="underline"></div>
+                </li>
+                <li>
+                    <a>others</a>
+                    <div class="underline"></div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="gallery">
+            <div class="casual">
+                <div class="image">
+                    <img alt="" />
+                </div>
+                <div class="image">
+                    <img alt="" />
+                </div>
+                <div class="image">
+                    <img alt="" />
+                </div>
+                <div class="image">
+                    <img alt="" />
+                </div>
+            </div>
+            <div class="bridal">
+                <div class="image">
+                    <img alt="" />
+                </div>
+                <div class="image">
+                    <img alt="" />
+                </div>
+                <div class="image">
+                    <img alt="" />
+                </div>
+                <div class="image">
+                    <img alt="" />
+                </div>
+            </div>
+            <div class="others">
+                <div class="image">
+                    <img alt="" />
+                </div>
+                <div class="image">
+                    <img alt="" />
+                </div>
+                <div class="image">
+                    <img alt="" />
+                </div>
+                <div class="image">
+                    <img alt="" />
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <span class="footerNav">
+                <button class="pageNav" id="previous">< previous</button>
+                <button class="pageNav" id="next">next ></button>
+            </span>
+        </div>
+    </body>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
+    <script src="/__/firebase/8.10.0/firebase-app.js"></script>
+    <script src="/__/firebase/8.10.0/firebase-app-check.js"></script>
+    <script src="/__/firebase/8.10.0/firebase-firestore.js"></script>
+    <script src="/__/firebase/8.10.0/firebase-auth.js"></script>
+    <script src="/__/firebase/8.10.0/firebase-analytics.js"></script>
+    <script src="/__/firebase/init.js"></script>
+    <script src="./script/script.js"></script>
+    <script src="./script/gallery.js"></script>
+    <script src="./script/database.js"></script>
+</html>

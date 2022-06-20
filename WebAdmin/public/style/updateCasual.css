@@ -1,0 +1,29 @@
+* {
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    margin: 3em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em;
+}
+
+div {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
+
+p {
+    position: absolute;
+    margin: 1em;
+    font-size: larger;
+}

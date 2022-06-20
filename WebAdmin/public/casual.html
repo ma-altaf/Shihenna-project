@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>casual</title>
+        <link rel="stylesheet" href="./style/casual.css" />
+    </head>
+    <body>
+        <span>
+            <label for="ID">ID</label>
+            <input id="ID" name="ID" type="text" />
+        </span>
+        <span>
+            <!-- display the image to be added -->
+            <div class="preview"></div>
+        </span>
+        <span>
+            <button id="fileItemBtn" onclick="fileItem.click()">
+                add image
+            </button>
+            <input
+                id="fileItem"
+                type="file"
+                accept="image/png, image/jpeg"
+                multiple
+            />
+        </span>
+        <span>
+            <button id="submit" disabled>submit</button>
+        </span>
+        <span>
+            <div id="stateViewer"></div>
+        </span>
+    </body>
+
+    <script src="/__/firebase/8.10.0/firebase-app.js"></script>
+    <script src="/__/firebase/8.10.0/firebase-app-check.js"></script>
+    <script src="/__/firebase/8.10.0/firebase-firestore.js"></script>
+    <script src="/__/firebase/8.10.0/firebase-auth.js"></script>
+    <script src="/__/firebase/8.10.0/firebase-storage.js"></script>
+    <script src="/__/firebase/init.js"></script>
+    <script src="./script/casual.js"></script>
+</html>

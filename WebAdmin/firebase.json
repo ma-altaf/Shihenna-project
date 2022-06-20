@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "site": "shihenna4dm1n",
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

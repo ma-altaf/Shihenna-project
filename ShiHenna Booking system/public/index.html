@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>booking system</title>
+    </head>
+    <body>
+        <button onclick="signOut()">sign out</button>
+    </body>
+    <script src="/__/firebase/8.10.0/firebase-app.js"></script>
+    <script src="/__/firebase/8.10.0/firebase-auth.js"></script>
+    <script src="/__/firebase/8.10.0/firebase-firestore.js"></script>
+    <script src="/__/firebase/init.js"></script>
+    <script>
+        var provider = new firebase.auth.GoogleAuthProvider();
+
+        firebase.auth().onAuthStateChanged((user) => {
+            if (user) {
+                console.log("signed in as: ", user.uid);
+                firebase
+                    .firestore()
+                    .doc("admin/detail")
+                    .get()
+                    .then((doc) => {
+                        window.location.href = `./${doc.data().entrance}`;
+                    })
+                    .catch((e) => console.log(e));
+            } else {
+                firebase
+                    .auth()
+                    .signInWithPopup(provider)
+                    .then((user) => {
+                        console.log("signed in as: ", user.uid);
+                    })
+                    .catch((e) => {
+                        console.log(e.message);
+                    });
+            }
+        });
+
+        function signOut() {
+            firebase
+                .auth()
+                .signOut()
+                .then(() => {
+                    console.log("signed out!");
+                })
+                .catch((error) => {
+                    console.log(error);
+                });
+        }
+    </script>
+</html>

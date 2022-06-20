@@ -1,0 +1,91 @@
+@import "./variables";
+
+.indexPage {
+    .footer {
+        color: rgb(180, 180, 180);
+        mix-blend-mode: difference;
+        font-size: 2em;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 100%;
+        min-height: 100vh;
+        padding: 0.5em 1em;
+        position: sticky;
+        bottom: 0;
+        left: 0;
+
+        h4 {
+            font-size: larger;
+            color: $primaryColor;
+            line-height: 100%;
+        }
+
+        .location {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+        .bottomLogo {
+            padding: 1em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            h4 {
+                text-transform: uppercase;
+                font-size: larger;
+            }
+
+            p {
+                transition: all 0.3s;
+                &:hover {
+                    font-weight: bolder;
+                    color: $primaryColor;
+                }
+            }
+        }
+        .greeting {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            flex-direction: column;
+            color: $primaryColor;
+
+            h5 {
+                font-size: xx-large;
+            }
+
+            table {
+                td {
+                    text-align: justify;
+                    font-size: x-large;
+                }
+            }
+
+            h3 {
+                padding-top: 0.1em;
+                font-size: xx-large;
+            }
+        }
+    }
+}
+
+.footerBg {
+    background-color: $secondaryColor;
+}
+
+.cursorActive {
+    background-color: $accentColor;
+    border-color: $accentColor;
+    mix-blend-mode: normal !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: $mobileSize) {
+    .cursorActive {
+        display: none;
+    }
+}

@@ -1,0 +1,62 @@
+.indexPage {
+    section {
+        overflow: hidden;
+        position: relative;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .gallery .bg {
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    .gallery h1 {
+        color: $primaryColor;
+        z-index: 1;
+        font-size: 3em;
+        font-weight: bold;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+    }
+
+    .viewMore {
+        border-radius: 2rem;
+        display: flex;
+        height: 3rem;
+        width: 6rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $accentColor;
+        padding: 1rem 2rem;
+        border: none;
+        z-index: 5;
+        position: absolute;
+        bottom: 30px;
+        right: 30px;
+        overflow: hidden;
+
+        h3 {
+            position: absolute;
+            line-height: 3rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: large;
+            color: $primaryColor;
+            transition: all 0.3s ease-in;
+            transform: translateY(1.5rem);
+        }
+        &:hover {
+            h3 {
+                transform: translateY(-1.5rem);
+            }
+        }
+    }
+}

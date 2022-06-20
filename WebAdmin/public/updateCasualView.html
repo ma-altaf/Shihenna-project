@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style/updateCasualView.css" />
+        <title>Document</title>
+    </head>
+    <body onload="populateImgViewer()">
+        <span>
+            <label for="newID">update ID</label>
+            <input
+                type="text"
+                name="newID"
+                id="newID"
+                placeholder="enter new then click on update ID button"
+            />
+            <button onclick="updateID()">update ID</button>
+        </span>
+
+        <!-- display the already existing images -->
+        <span id="imgViewer"></span>
+        <!-- display the new image -->
+        <div class="preview"></div>
+        <button id="fileItemBtn" onclick="fileItem.click()">add image</button>
+        <input
+            id="fileItem"
+            type="file"
+            accept="image/png, image/jpeg"
+            multiple
+        />
+
+        <button id="imageSubmit" onclick="submitImages()">
+            submit new images
+        </button>
+
+        <button id="deleteDesign" onclick="deleteDoc()">delete design</button>
+
+        <div id="stateViewer"></div>
+    </body>
+
+    <script src="/__/firebase/8.10.0/firebase-app.js"></script>
+    <script src="/__/firebase/8.10.0/firebase-app-check.js"></script>
+    <script src="/__/firebase/8.10.0/firebase-firestore.js"></script>
+    <script src="/__/firebase/8.10.0/firebase-auth.js"></script>
+    <script src="/__/firebase/8.10.0/firebase-storage.js"></script>
+    <script src="/__/firebase/init.js"></script>
+    <script src="script/updateCasualView.js"></script>
+</html>

@@ -1,0 +1,54 @@
+* {
+    padding: 0;
+    margin: 10px;
+    font-family: sans-serif;
+}
+
+input {
+    padding: 10px;
+}
+
+button {
+    padding: 10px;
+}
+
+body {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#imgViewer {
+    border-radius: 5px;
+    background-color: rgb(233, 233, 233);
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+#imgViewer img {
+    width: 40vw;
+    margin: 20px;
+}
+
+#fileItem {
+    display: none;
+}
+
+#deleteDesign {
+    text-transform: uppercase;
+    padding: 10px;
+    border: none;
+    background-color: red;
+}
+
+#preview {
+    width: 50vw;
+}
+
+.preview img {
+    width: 50vw;
+}

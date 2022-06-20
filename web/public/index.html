@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link
+            rel="shortcut icon"
+            href="images/favicon.ico"
+            type="image/x-icon"
+        />
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="preload"
+            as="style"
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        />
+        <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet"
+        />
+        <link rel="preload" as="style" href="style/style.css" />
+        <link rel="preload" as="style" href="style/index.css" />
+        <link rel="preload" as="script" href="./script/script.js" />
+        <link rel="preload" as="script" href="./script/index.js" />
+        <link rel="stylesheet" href="style/style.css" />
+        <link rel="stylesheet" href="style/index.css" />
+        <title>Shi_henna ❤</title>
+    </head>
+    <body class="indexPage">
+        <ul class="bar-transition">
+            <li></li>
+            <li></li>
+            <li>
+                <div class="transitionLogo">
+                    <h1>
+                        shi <br />
+                        henna
+                    </h1>
+                </div>
+            </li>
+            <li></li>
+            <li></li>
+        </ul>
+
+        <div class="loader">
+            <div class="loadingGif">
+                <div class="loadingGifInner"></div>
+            </div>
+        </div>
+
+        <div class="cursor"></div>
+
+        <div class="userUI"></div>
+
+        <nav>
+            <div class="logo">
+                <div class="coverPlaceholder">
+                    <div class="cover"></div>
+                </div>
+                <h4>Shi_henna</h4>
+            </div>
+            <ul class="nav-links">
+                <li><a href="./gallery.html">designs</a></li>
+                <li><a href="./about.html">about</a></li>
+                <li><a href="./contact.html">social</a></li>
+            </ul>
+            <div class="burger" onclick="navSlide()">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+        </nav>
+        <div class="landing">
+            <div class="left">
+                <div class="introPara">
+                    <div class="h2Placeholder">
+                        <h2>Hello there 👋,</h2>
+                    </div>
+                    <div class="h2Placeholder">
+                        <h2>Team mehndi, where are you at?</h2>
+                    </div>
+
+                    <div
+                        class="cta"
+                        id="cta"
+                        onclick="barTransition('./gallery.html')"
+                    >
+                        me
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="founder">
+                    <div class="image"></div>
+                    <div class="cover"></div>
+                </div>
+            </div>
+        </div>
+        <div class="scrollerAnim">
+            <div class="scrollerBox" onclick="scroller()">
+                <div class="scollerContent"></div>
+            </div>
+        </div>
+
+        <div class="gallery">
+            <section>
+                <div class="bg"></div>
+                <h1 class="title">the</h1>
+            </section>
+            <section>
+                <div class="bg"></div>
+                <h1 class="title">latest</h1>
+            </section>
+            <section class="viewMoreSection">
+                <div class="bg"></div>
+                <h1 class="title">designs</h1>
+
+                <button
+                    class="viewMore"
+                    onclick="barTransition('./gallery.html')"
+                >
+                    <h3>
+                        view <br />
+                        more
+                    </h3>
+                </button>
+            </section>
+        </div>
+
+        <div class="testimonies">
+            <div class="topSection">
+                <div class="subTitle">
+                    <h3>what</h3>
+                    <h3>people</h3>
+                    <h3>say</h3>
+                    <h3>about</h3>
+                    <h3 class="me">me</h3>
+                    <div class="underline"></div>
+                </div>
+            </div>
+
+            <div class="testimonyCards">
+                <div class="testimonySections">
+                    <div class="Testimonyimage" id="testimonyImg1"></div>
+                    <div class="comment">
+                        <p>
+                            "Lorem 🤣 ipsum dolor sit amet consectetur
+                            adipisicing elit Exercitationem velit voluptates
+                            voluptas et dolorem deserunt veritatis assumenda ex
+                            fuga debitis in est" - name surname
+                        </p>
+                    </div>
+                    <div class="nameSection">
+                        <h3 class="name">shifa-shifa-shifa-shifa</h3>
+                        <h3 class="name">henna-henna-henna</h3>
+                    </div>
+                </div>
+                <div class="testimonySections">
+                    <div class="Testimonyimage" id="testimonyImg2"></div>
+                    <div class="comment">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit Exercitationem velit voluptates voluptas et
+                            dolorem deserunt veritatis assumenda ex fuga debitis
+                            in est
+                        </p>
+                    </div>
+                    <div class="nameSection">
+                        <h3 class="name">name-name-name-name</h3>
+                        <h3 class="name">surname-surname-surname</h3>
+                    </div>
+                </div>
+                <div class="testimonySections">
+                    <div class="Testimonyimage" id="testimonyImg3"></div>
+                    <div class="comment">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit Exercitationem velit voluptates voluptas et
+                            dolorem deserunt veritatis assumenda ex fuga debitis
+                            in est
+                        </p>
+                    </div>
+                    <div class="nameSection">
+                        <h3 class="name">name-name-name-name</h3>
+                        <h3 class="name">surname-surname-surname</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="location">
+                <span class="locationBox">
+                    <h4>Location</h4>
+                    <p>
+                        Ave. Veerasamy Iyer<br />
+                        Morc. Raffray Le Hochet. Terre Rouge<br />
+                        Pamplemousses<br />
+                        Mauritius
+                    </p></span
+                >
+
+                <span class="phoneBox">
+                    <h4>Contact</h4>
+                    <p>+230 5824 1503</p></span
+                >
+            </div>
+            <div class="bottomLogo">
+                <h4>shi_henna</h4>
+                <br />
+                <p id="scrollTop">Back to top</p>
+            </div>
+            <div class="greeting">
+                <h5 colspan="2">Opening Hours</h5>
+                <table>
+                    <tr>
+                        <td>Mon:&ensp;</td>
+                        <td>9:00 AM – 8:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Tue:&ensp;</td>
+                        <td>9:00 AM – 8:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Wed:&ensp;</td>
+                        <td>9:00 AM – 8:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Thu:&ensp;</td>
+                        <td>9:00 AM – 8:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Fri:&ensp;</td>
+                        <td>9:00 AM – 8:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Sat:&ensp;</td>
+                        <td>9:00 AM – 8:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Sun:&ensp;</td>
+                        <td>9:00 AM – 8:00 PM</td>
+                    </tr>
+                </table>
+
+                <h3>Have a great day</h3>
+            </div>
+        </footer>
+    </body>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
+    <script src="/__/firebase/8.10.0/firebase-app.js"></script>
+    <script src="/__/firebase/8.10.0/firebase-auth.js"></script>
+    <script src="/__/firebase/init.js"></script>
+    <script src="/__/firebase/8.10.0/firebase-analytics.js"></script>
+    <script src="./script/script.js"></script>
+    <script src="./script/landing.js"></script>
+    <script src="./script/testimonies.js"></script>
+    <script src="./script/index.js"></script>
+    <script src="./script/transitions.js"></script>
+    <script src="./script/footer.js"></script>
+</html>

@@ -1,0 +1,142 @@
+@import "./variables";
+@import "./nav";
+@import "./landing";
+@import "./landingImg";
+@import "./testimonies";
+@import "./footer";
+
+.indexPage {
+    .userUI {
+        width: fit-content;
+        height: fit-content;
+        transition: all 0.3s;
+        max-width: 25vw;
+        color: $primaryColor;
+        z-index: 10;
+        position: fixed;
+        background-color: $accentColor;
+        border-radius: 5px;
+        bottom: 1em;
+        right: 1em;
+        box-shadow: 0 0 2rem $accentColor, 0 0 0.8rem $accentColor;
+
+        #usageAgreement {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            padding: 1em;
+        }
+        button {
+            color: $accentColor;
+            margin-top: 1em;
+            width: 5em;
+            font-size: 1em;
+            height: 2em;
+            border-radius: 2em;
+            background-color: $primaryColor;
+            border: none;
+            padding: 0;
+
+            &:disabled {
+                opacity: 0.5;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $mobileSize) {
+    .indexPage {
+        .userUI {
+            max-width: 90vw !important;
+        }
+
+        nav .burger {
+            display: block;
+        }
+
+        .nav-links {
+            width: 100% !important;
+            position: absolute;
+            right: 0px;
+            top: 8vh;
+            height: 92vh;
+            background-color: $primaryColor;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transform: translateY(-50%) scaleY(0);
+            transition: transform 0.3s ease;
+            z-index: 10;
+        }
+
+        .landing {
+            grid-template-columns: auto;
+
+            .introPara {
+                margin-top: 20px;
+                font-size: 1rem;
+                width: 80%;
+            }
+            .founder {
+                width: 50vw;
+                height: 50vw;
+            }
+        }
+
+        .testimonies {
+            .subTitle {
+                margin: 1em !important;
+                transform: scale(1) !important;
+            }
+            .testimonyCards {
+                .testimonySections {
+                    .comment {
+                        font-size: medium !important;
+                        width: 50vw;
+                        font-size: 1.3em;
+                        left: 45%;
+                    }
+                    .name {
+                        font-size: 20vh;
+                    }
+                    .Testimonyimage {
+                        width: 50vw;
+                        height: 50vh;
+                        margin: 1em 1em;
+                    }
+                }
+                .testimonySections:nth-child(2) {
+                    .comment {
+                        left: 5% !important;
+                    }
+                }
+            }
+        }
+
+        .footer {
+            grid-template-columns: 1fr !important;
+        }
+    }
+}
+
+.highlightedText {
+    font-weight: 900;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.indexPage .nav-active {
+    transform: translateY(0%) scaleY(1);
+}
+
+.indexPage .burger-active {
+    .bar1 {
+        transform: rotateZ(-45deg) translateY(300%) !important;
+    }
+    .bar2 {
+        transform: translateX(100%) scale(0) !important;
+    }
+    .bar3 {
+        transform: rotateZ(45deg) translateY(-300%) !important;
+    }
+}

@@ -1,0 +1,163 @@
+.casualImgView {
+  min-height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+}
+
+.casualImgView .container {
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.casualImgView .container .back {
+  padding-right: 0.5em;
+  color: #151515;
+  font-size: 2em;
+  overflow: hidden;
+}
+
+.casualImgView .container .back h3 {
+  -webkit-transform: translateX(200%);
+          transform: translateX(200%);
+}
+
+.casualImgView .container .imagesView {
+  height: 100vh;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  scroll-behavior: smooth;
+}
+
+.casualImgView .container .imagesView img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.casualImgView .container #IDLabel {
+  z-index: 5;
+  position: absolute;
+  bottom: 3em;
+  right: 0;
+  -webkit-transform: translateX(200%) rotateZ(90deg);
+          transform: translateX(200%) rotateZ(90deg);
+  font-size: 2.5em;
+  color: #f5f5f0;
+  background-color: black;
+  padding: 0.1em 0.3em 0.1em 0.3em;
+}
+
+.casualImgView .container .link {
+  overflow: hidden;
+  margin-top: 1em;
+}
+
+.casualImgView .container .link .item {
+  -webkit-transform: translateX(-200%);
+          transform: translateX(-200%);
+  margin: 10px;
+  z-index: 12;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 3px solid;
+  border-color: #151515;
+  background-color: #f5f5f0;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+}
+
+.casualImgView .bookBtn {
+  margin-bottom: auto;
+  overflow: hidden;
+  background-color: #f5f5f0;
+  color: #151515;
+  padding: 0.3rem 1rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 2rem;
+  border-color: #151515;
+  border-style: solid;
+  text-transform: uppercase;
+  font-size: large;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -webkit-transform: translateY(10vh);
+          transform: translateY(10vh);
+}
+
+.casualImgView .bookBtn:hover {
+  background-color: #e29578;
+  color: #f5f5f0;
+  border-color: #e29578;
+}
+
+.selected {
+  margin: 9px !important;
+  border-width: 5px !important;
+  width: 13px !important;
+  height: 13px !important;
+  background-color: #151515 !important;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container .back {
+    position: absolute;
+    top: 0.5em;
+    left: 0.5em;
+    z-index: 5;
+  }
+  .container #IDLabel {
+    background-color: rgba(0, 0, 0, 0.6) !important;
+  }
+  .container .imagesView {
+    max-width: 100vw !important;
+  }
+  .container .imagesView img {
+    width: auto !important;
+  }
+  .container .link {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    -webkit-transform: rotateZ(-90deg);
+            transform: rotateZ(-90deg);
+    margin: auto;
+  }
+  .bookBtn {
+    margin-bottom: 50px !important;
+  }
+}
+/*# sourceMappingURL=casualImgView.css.map */

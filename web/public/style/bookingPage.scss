@@ -1,0 +1,598 @@
+@import "./variables";
+
+.highlightedText {
+    font-weight: 900;
+    color: $accentColor;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.contactBoxClicked {
+    background-color: $accentColor;
+    color: $primaryColor;
+}
+
+.bookingPageView {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    .title {
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-content: center;
+        text-align: center;
+        letter-spacing: 5px;
+        vertical-align: middle;
+        width: 100%;
+        margin-top: 85px;
+        margin-bottom: 25px;
+        .back {
+            transition: scale 0.5s ease;
+        }
+        h3 {
+            text-transform: uppercase;
+            font-size: 2em;
+        }
+    }
+
+    .bookingContainer {
+        width: 100vw;
+        min-height: 50vh;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-direction: column;
+
+        .bookingTable {
+            display: grid;
+            grid-template:
+                "a a"
+                "b c";
+
+            .header {
+                grid-area: a;
+                overflow: hidden;
+                p {
+                    margin-top: 0.5em;
+                    margin-left: 2.5em;
+                    margin-right: 2.5em;
+                    text-align: center;
+                }
+                a {
+                    text-decoration: none;
+                    display: inline-block;
+                    position: relative;
+                    color: $accentColor;
+                }
+
+                a:after {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    transform: scaleX(0);
+                    height: 2px;
+                    bottom: 0;
+                    left: 0;
+                    background-color: $accentColor;
+                    transform-origin: bottom right;
+                    transition: transform 0.3s ease-out;
+                }
+
+                a:hover:after {
+                    transform: scaleX(1);
+                    transform-origin: bottom left;
+                }
+            }
+
+            .contactBox {
+                opacity: 0;
+                width: 15em;
+                padding: 1em 1em;
+                margin: 1em auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                border: solid 3px;
+                border-radius: 7px;
+                text-align: center;
+                transition: all 0.3s ease-in-out;
+
+                h3 {
+                    margin-bottom: 0.5em;
+                    text-transform: uppercase;
+                }
+
+                h6 {
+                    transition: all 0.3s;
+                }
+
+                &:hover {
+                    h6 {
+                        font-size: 0.7em;
+                        color: $accentColor;
+                    }
+                }
+            }
+            .emailBox {
+                grid-area: b;
+            }
+            .phoneBox {
+                grid-area: c;
+            }
+        }
+
+        .bookingUI {
+            opacity: 0;
+            position: relative;
+            margin: 2em;
+            width: 30vw;
+            min-height: 90vh;
+            background-color: $primaryColor;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07),
+                0 2px 4px rgba(0, 0, 0, 0.07), 0 4px 8px rgba(0, 0, 0, 0.07),
+                0 8px 16px rgba(0, 0, 0, 0.07), 0 16px 32px rgba(0, 0, 0, 0.07),
+                0 32px 64px rgba(0, 0, 0, 0.07);
+
+            h3 {
+                padding: 0.5em;
+                text-align: center;
+                text-transform: uppercase;
+                font-size: xx-large;
+            }
+            p {
+                margin: 0.5em;
+                font-size: large;
+            }
+
+            #transitionCover {
+                z-index: 10;
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 100%;
+                width: 0;
+                background-color: $accentColor;
+            }
+
+            #booked {
+                color: $primaryColor;
+                background-color: $accentColor;
+                position: absolute;
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                padding: 1em;
+                #details {
+                    padding-left: 3em;
+                    padding-right: 3em;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    text-align: start;
+                    width: 100%;
+                    height: 40%;
+                }
+
+                .designBtn {
+                    color: $primaryColor;
+                    &:hover {
+                        border-color: $primaryColor;
+                        color: $accentColor;
+                        box-shadow: inset 0 -2.3em 0 0 $primaryColor;
+                    }
+                }
+
+                #resign {
+                    position: absolute;
+                    bottom: 30%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 7em;
+                    height: 3em;
+                    border-radius: 2em;
+                    border: none;
+                    text-transform: uppercase;
+                    color: $accentColor;
+                    font-weight: bold;
+                }
+
+                h5 {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    padding: 1.5em;
+                    text-align: justify;
+                }
+            }
+
+            #userInfo {
+                padding: 1em;
+                display: none;
+                flex-direction: column;
+                align-items: center;
+
+                input {
+                    font-size: medium;
+                    width: 95%;
+                    margin: 1em;
+                    padding: 0.3em;
+                    outline: 0;
+                    border-width: 0 0 2px;
+                    background-color: transparent;
+                    transition: all 0.3s;
+
+                    &:focus {
+                        color: $accentColor;
+                        border-color: $accentColor;
+                    }
+                }
+
+                button {
+                    text-transform: uppercase;
+                    background-color: transparent;
+                    border: solid 2px;
+                    font-size: large;
+                    margin: 3em;
+                    padding: 0.5em 1em;
+                    transition: all 0.325s ease-out;
+                    &:hover {
+                        border-color: $accentColor;
+                        color: $primaryColor;
+                        box-shadow: inset 0 -2.3em 0 0 $accentColor;
+                    }
+                }
+
+                h5 {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    padding: 1.5em;
+                    text-align: justify;
+                }
+            }
+
+            #datePicker {
+                width: 100%;
+                height: 100%;
+                padding: 1em;
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                #monthView {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    width: 100%;
+                    p {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                    button {
+                        font-size: larger;
+                        background-color: transparent;
+                        border: none;
+                        transition: all 0.325s ease-out;
+                        &:hover:enabled {
+                            color: $accentColor;
+                        }
+                    }
+                }
+                #calendar {
+                    width: 100%;
+                    display: grid;
+                    grid-template-columns: repeat(7, 1fr);
+                    div {
+                        transition: all 0.3s ease-out;
+                        width: 100%;
+                        min-height: 3em;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: transparent;
+                    }
+
+                    .hovered {
+                        transform: scale(1.2);
+                        background-color: $accentColor;
+                        color: $primaryColor;
+                    }
+                }
+            }
+
+            #timePicker {
+                display: none;
+                height: 100%;
+                padding: 1em;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                #clock {
+                    display: flex;
+                    width: 100%;
+                    flex-direction: column;
+                    button {
+                        padding: 0.3em;
+                        height: 100%;
+                        background-color: $primaryColor;
+                        border: solid 1px $secondaryColor;
+                        transition: all 0.325s ease-out;
+                        color: black;
+
+                        &:hover:enabled {
+                            border-color: $accentColor;
+                            color: $primaryColor;
+                            box-shadow: inset 0 -1.8em 0 0 $accentColor;
+                        }
+
+                        &:disabled {
+                            background-color: $secondaryColor;
+                            color: $primaryColor;
+                        }
+                    }
+                }
+            }
+
+            #confirmation {
+                padding: 1em;
+                display: none;
+                flex-direction: column;
+                align-items: center;
+
+                #displayAppointment {
+                    padding: 1em;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    text-align: start;
+                    width: 100%;
+                    height: 40%;
+                }
+
+                #confirmBtn {
+                    text-transform: uppercase;
+                    background-color: transparent;
+                    border: solid 2px;
+                    font-size: large;
+                    margin: 3em;
+                    padding: 0.5em 1em;
+                    transition: all 0.325s ease-out;
+                    &:hover:enabled {
+                        border-color: $accentColor;
+                        color: $primaryColor;
+                        box-shadow: inset 0 -2.3em 0 0 $accentColor;
+                    }
+
+                    &:disabled {
+                        transform: scale(1.2);
+                        background-color: $accentColor;
+                        color: $primaryColor;
+                    }
+                }
+            }
+
+            #thankYou {
+                text-align: justify;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                background-color: $accentColor;
+                color: $primaryColor;
+                padding: 3em;
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            #unAvailable {
+                padding: 1em;
+                display: none;
+                flex-direction: column;
+                align-items: center;
+
+                button {
+                    text-transform: uppercase;
+                    background-color: transparent;
+                    border: solid 2px;
+                    font-size: large;
+                    margin: 1em;
+                    padding: 0.5em 1em;
+                    transition: all 0.325s ease-out;
+                    &:hover {
+                        border-color: $accentColor;
+                        color: $primaryColor;
+                        box-shadow: inset 0 -2.3em 0 0 $accentColor;
+                    }
+                }
+            }
+
+            #BookingBack {
+                z-index: 11;
+                position: absolute;
+                top: 0;
+                left: 0;
+                font-size: xx-large;
+                padding: 0em 0.5em;
+                background-color: transparent;
+                border: none;
+                transform: translateX(-50%);
+                &:hover {
+                    color: $accentColor;
+                }
+            }
+        }
+    }
+}
+
+.designBtn {
+    text-transform: uppercase;
+    background-color: transparent;
+    border: solid 2px;
+    font-size: large;
+    margin: 1em;
+    padding: 0.5em 1em;
+    transition: all 0.325s ease-out;
+    &:hover {
+        border-color: $accentColor;
+        color: $primaryColor;
+        box-shadow: inset 0 -2.3em 0 0 $accentColor;
+    }
+}
+
+@media screen and (min-width: $mobileSize) {
+    .bookingPageView {
+        .bookingContainer {
+            .bookingUI {
+                transform-style: preserve-3d;
+                transform: perspective(1000px);
+                h3 {
+                    transform: translateZ(30px);
+                }
+                p {
+                    transform: translateZ(50px);
+                }
+
+                #transitionCover {
+                    transform: translateZ(100px);
+                }
+
+                #booked {
+                    #resign {
+                        transform: translateX(-50%) translateZ(60px);
+                    }
+
+                    h5 {
+                        transform: translateZ(20px);
+                    }
+                }
+
+                #userInfo {
+                    input {
+                        transform: translateZ(55px);
+
+                        &:focus {
+                            transform: translateZ(65px);
+                        }
+                    }
+
+                    button {
+                        transform: translateZ(60px);
+                    }
+
+                    h5 {
+                        transform: translateZ(20px);
+                    }
+                }
+
+                #datePicker {
+                    #monthView {
+                        transform: translateZ(50px);
+
+                        button {
+                            &:hover:enabled {
+                                transform: translateZ(55px);
+                            }
+                        }
+                    }
+                    #calendar {
+                        transform: translateZ(60px);
+
+                        .hovered {
+                            transform: translateZ(65px);
+                        }
+                    }
+                }
+
+                #timePicker {
+                    #clock {
+                        button {
+                            &:enabled {
+                                transform: translateZ(55px);
+                            }
+
+                            &:hover:enabled {
+                                transform: translateZ(65px);
+                            }
+                        }
+                    }
+                }
+
+                #confirmation {
+                    #displayAppointment {
+                        transform: translateZ(60px);
+                    }
+
+                    #confirmBtn {
+                        transform: translateZ(65px);
+
+                        &:hover:enabled {
+                            transform: translateZ(70px);
+                        }
+                    }
+                }
+
+                #unAvailable {
+                    button {
+                        transform: translateZ(60px);
+
+                        &:hover {
+                            transform: translateZ(65px);
+                        }
+                    }
+                }
+
+                #BookingBack {
+                    transform: translateX(-50%) translateZ(110px);
+                }
+            }
+        }
+    }
+
+    .designBtn {
+        transform: translateZ(50px);
+    }
+}
+
+@media screen and (max-width: $mobileSize) {
+    .bookingPageView {
+        .bookingContainer {
+            .bookingTable {
+                div {
+                    margin: 1em auto !important;
+                }
+                grid-template:
+                    "a"
+                    "b"
+                    "c";
+            }
+            .bookingUI {
+                width: 90vw;
+
+                #booked {
+                    #details {
+                        padding-left: 1em;
+                        padding-right: 1em;
+                    }
+                }
+                #userInfo {
+                    button {
+                        margin: 5em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.invalid {
+    color: red;
+    border-color: red !important;
+}

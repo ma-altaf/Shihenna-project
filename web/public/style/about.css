@@ -1,0 +1,136 @@
+.aboutPage .aboutView {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 1fr;
+      grid-template-columns: 2fr 1fr;
+  overflow-y: hidden;
+  height: 100vh;
+  position: relative;
+}
+
+.aboutPage .aboutView .back {
+  margin: 10px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 20px;
+  color: #151515;
+  font-size: 2em;
+}
+
+.aboutPage .aboutView .left span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+
+.aboutPage .aboutView .left span .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #e29578;
+  text-transform: uppercase;
+  font-size: 5em;
+  overflow: hidden;
+  z-index: 5;
+}
+
+.aboutPage .aboutView .left span .contentText {
+  height: 55vh;
+  overflow: auto;
+  color: #151515;
+  font-size: large;
+  text-align: justify;
+  width: 50vw;
+  padding: 2rem;
+  z-index: 2;
+}
+
+.aboutPage .aboutView .left span .contentText a {
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  color: #e29578;
+}
+
+.aboutPage .aboutView .left span .contentText a:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #e29578;
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  transition: -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+}
+
+.aboutPage .aboutView .left span .contentText a:hover:after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+}
+
+.aboutPage .aboutView #image {
+  background-image: url("../images/profilePic.jpg");
+  height: 100vh;
+  width: 25vw;
+  background-position-x: 50%;
+  background-repeat: no-repeat;
+  overflow: visible;
+}
+
+@media screen and (max-width: 768px) {
+  .aboutPage .aboutView {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .aboutPage .aboutView .left span {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .aboutPage .aboutView #image {
+    margin: auto;
+    margin-bottom: 1em;
+    background-color: aqua;
+    width: 90vw;
+    height: 95vh;
+    background-position: 50%;
+  }
+  .aboutPage .aboutView .title {
+    margin-bottom: 0 !important;
+  }
+  .aboutPage .aboutView .contentText {
+    width: 100vw !important;
+    padding: 0;
+    height: -webkit-fit-content !important;
+    height: -moz-fit-content !important;
+    height: fit-content !important;
+  }
+}
+/*# sourceMappingURL=about.css.map */

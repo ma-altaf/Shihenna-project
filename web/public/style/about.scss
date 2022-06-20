@@ -1,0 +1,133 @@
+@import "./variables";
+
+@mixin largeText {
+    color: $accentColor;
+    text-transform: uppercase;
+    font-size: 5em;
+    overflow: hidden;
+    z-index: 5;
+}
+
+@mixin text {
+    color: $secondaryColor;
+    font-size: large;
+    text-align: justify;
+    width: 50vw;
+    padding: 2rem;
+    z-index: 2;
+
+    a {
+        text-decoration: none;
+        display: inline-block;
+        position: relative;
+        color: $accentColor;
+    }
+
+    a:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: $accentColor;
+        transform-origin: bottom right;
+        transition: transform 0.3s ease-out;
+    }
+
+    a:hover:after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+}
+
+@mixin image {
+    height: 100vh;
+    width: 25vw;
+    background-position-x: 50%;
+    background-repeat: no-repeat;
+    overflow: visible;
+}
+
+@mixin leftLayout {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+
+.aboutPage {
+    .aboutView {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        overflow-y: hidden;
+        height: 100vh;
+        position: relative;
+
+        .back {
+            margin: 10px;
+            width: fit-content;
+            padding: 20px;
+            color: $secondaryColor;
+            font-size: 2em;
+        }
+
+        .left {
+            span {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                @include leftLayout();
+                .title {
+                    display: flex;
+                    @include largeText();
+                }
+
+                .contentText {
+                    height: 55vh;
+                    overflow: auto;
+                    @include text();
+                }
+            }
+        }
+
+        #image {
+            background-image: url("../images/profilePic.jpg");
+            @include image();
+        }
+    }
+}
+
+@media screen and (max-width: $mobileSize) {
+    .aboutPage {
+        .aboutView {
+            grid-template-columns: 1fr;
+            height: fit-content;
+            .left {
+                span {
+                    height: fit-content;
+                }
+            }
+
+            #image {
+                margin: auto;
+                margin-bottom: 1em;
+                background-color: aqua;
+                width: 90vw;
+                height: 95vh;
+                background-position: 50%;
+            }
+            .title {
+                margin-bottom: 0 !important;
+            }
+            .contentText {
+                width: 100vw !important;
+                padding: 0;
+                height: fit-content !important;
+            }
+        }
+    }
+}

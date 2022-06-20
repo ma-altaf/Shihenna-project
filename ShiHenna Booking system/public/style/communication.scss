@@ -1,0 +1,72 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+}
+body {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f5f5f0;
+}
+
+#communicationList {
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+
+    span {
+        .item {
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.02),
+                0 6.7px 5.3px rgba(0, 0, 0, 0.028),
+                0 12.5px 10px rgba(0, 0, 0, 0.035),
+                0 22.3px 17.9px rgba(0, 0, 0, 0.042),
+                0 41.8px 33.4px rgba(0, 0, 0, 0.05),
+                0 100px 80px rgba(0, 0, 0, 0.07);
+            margin: 1em;
+            padding: 1em;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        div {
+            p {
+                margin: 0.3em;
+            }
+            .details {
+                width: fit-content;
+                padding-bottom: 1em;
+            }
+            .template {
+                display: flex;
+                height: fit-content;
+
+                textarea {
+                    padding: 1em;
+                    height: 15vh;
+                }
+                .options {
+                    display: grid;
+                    button {
+                        margin: 0.5em;
+                        padding: 0.5em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #communicationList {
+        width: 95vw;
+
+        .item {
+            flex-direction: column !important;
+        }
+    }
+}

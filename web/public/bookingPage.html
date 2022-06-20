@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link
+            rel="shortcut icon"
+            href="images/favicon.ico"
+            type="image/x-icon"
+        />
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="stylesheet" href="./style/style.css" />
+        <link rel="stylesheet" href="./style/bookingPage.css" />
+        <title>Booking 📜</title>
+    </head>
+    <body class="bookingPageView" onload="bookingEntrance()">
+        <div class="loader">
+            <div class="loadingGif">
+                <div class="loadingGifInner"></div>
+            </div>
+        </div>
+
+        <div class="cursor"></div>
+
+        <div class="title">
+            <h3 class="back" onclick="back()"><</h3>
+            <h3>booking</h3>
+        </div>
+
+        <div class="bookingContainer">
+            <div class="bookingTable">
+                <div class="header">
+                    <p>
+                        Use the online booking system below or
+                        <a class="Anchor" href="./contact.html"
+                            >get in touch with me</a
+                        >
+                        if you have any question.
+                    </p>
+                </div>
+
+                <div class="emailBox contactBox">
+                    <h3>email</h3>
+                    <p>shifaHenna@gmail.com</p>
+                    <h6>Click to copy</h6>
+                </div>
+                <div class="phoneBox contactBox">
+                    <h3>phone</h3>
+                    <p>+230 5824 1503</p>
+                    <h6>Click to copy</h6>
+                </div>
+            </div>
+
+            <div class="bookingUI">
+                <div id="transitionCover"></div>
+                <div id="booked">
+                    <h3>Booked</h3>
+                    <div id="details"></div>
+                    <button id="resign" onclick="resignAppointment()">
+                        Opt-Out
+                    </button>
+                    <h5>
+                        You seem to already be booked. <br />
+                        If you want to change the appointment date or cancel
+                        wait atleast for 3 hours from when you did the previous
+                        booking or contact me.
+                    </h5>
+                </div>
+                <div id="userInfo">
+                    <h3>contact information</h3>
+                    <p>
+                        Enter your name and phone number so that I can get in
+                        contact with you.
+                    </p>
+                    <input
+                        type="text"
+                        name="name"
+                        id="name"
+                        placeholder="Name/Pseudo"
+                    />
+                    <input
+                        type="tel"
+                        name="phoneNumber"
+                        id="phoneNumber"
+                        placeholder="Phone Number (5xxxxxxx)"
+                    />
+                    <button onclick="saveInfo()">next ></button>
+                    <h5>
+                        NOTE: <br />
+                        The booking system only allow bookings from tomorrow
+                        onward, hence if you want to book for today contact me
+                        directly.
+                    </h5>
+                </div>
+                <div id="datePicker">
+                    <button id="BookingBack" onclick="bookingState(1)">
+                        ←
+                    </button>
+                    <h3>pick a date</h3>
+                    <p>Select the date you wish to come.</p>
+                    <div id="monthView">
+                        <button
+                            onclick="previousMonth()"
+                            id="previous"
+                            disabled
+                        >
+                            <
+                        </button>
+                        <p></p>
+                        <button onclick="nextMonth()" id="next">></button>
+                    </div>
+                    <div id="calendar"></div>
+                </div>
+                <div id="timePicker">
+                    <button id="BookingBack" onclick="bookingState(2)">
+                        ←
+                    </button>
+                    <h3>pick a time</h3>
+                    <p>Select the time you wish to come.</p>
+                    <div id="clock"></div>
+                </div>
+                <div id="confirmation">
+                    <button id="BookingBack" onclick="bookingState(3)">
+                        ←
+                    </button>
+                    <h3>confirm your appointment</h3>
+                    <p>Confirm, if the appointment details are correct.</p>
+                    <div id="displayAppointment">
+                        <div id="name"></div>
+                        <div id="phoneNum"></div>
+                        <div id="time"></div>
+                        <div id="viewDesignBtn"></div>
+                    </div>
+                    <button id="confirmBtn" onclick="setAppointment()">
+                        Confirm
+                    </button>
+                </div>
+                <div id="thankYou">
+                    <h3>thank you!</h3>
+                    <p>
+                        I will contact you through whatsapp or mobile to get you
+                        a copy of the appointment within the next 24 hours.
+                        <br />
+                        <br />
+                        In case you do not receive any message by then please
+                        contact me.
+                    </p>
+                </div>
+                <div id="unAvailable">
+                    <h3>appointment time unavailable</h3>
+                    <p>
+                        Sorry 😢, the time you chose has alredy been taken.
+                        <br />
+                        <br />
+                        Please, choose another date and/or time.
+                    </p>
+                    <button onclick="bookingState(2)">date</button>
+                    <button onclick="bookingState(3)">time</button>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
+    <script src="/__/firebase/8.10.0/firebase-app.js"></script>
+    <script src="/__/firebase/8.10.0/firebase-firestore.js"></script>
+    <script src="/__/firebase/8.10.0/firebase-auth.js"></script>
+    <script src="/__/firebase/8.10.0/firebase-analytics.js"></script>
+    <script src="/__/firebase/init.js"></script>
+    <script src="./script/vanilla-tilt.min.js"></script>
+    <script src="./script/script.js"></script>
+    <script src="./script/bookingPage.js"></script>
+</html>

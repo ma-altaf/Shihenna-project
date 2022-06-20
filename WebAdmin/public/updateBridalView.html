@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style/updateBridalView.css" />
+        <title>Document</title>
+    </head>
+    <body onload="populateContentViewer()">
+        <div class="contentViewBox"></div>
+
+        <span id="content"></span>
+        <span id="componentAddSect">
+            <button id="fileItemBtn" onclick="fileItem.click()">
+                add image
+            </button>
+
+            <input id="fileItem" type="file" accept="image/png, image/jpeg" />
+            <br />
+            <img src="" alt="" id="preview" />
+            <br />
+
+            <input
+                type="radio"
+                id="landscape"
+                name="orientation"
+                value="landscape"
+                checked
+            />
+              <label for="landscape">landscape</label><br />
+            <input
+                type="radio"
+                id="portrait"
+                name="orientation"
+                value="portrait"
+            />
+              <label for="portrait">portrait</label><br />
+
+            <textarea
+                name="text"
+                id="componentText"
+                cols="80"
+                rows="10"
+            ></textarea>
+            <br />
+            <button id="addComponent" disabled>add component</button>
+        </span>
+
+        <button id="imageUpdateBtn" onclick="addImg()">update images</button>
+        <button id="orientationUpdateBtn" onclick="updateOrientations()">
+            update orientations
+        </button>
+        <button id="textUpdateBtn" onclick="updateTexts()">update texts</button>
+        <button id="deleteDesign" onclick="deleteDoc()">delete design</button>
+
+        <div id="stateViewer"></div>
+    </body>
+
+    <script src="/__/firebase/8.10.0/firebase-app.js"></script>
+    <script src="/__/firebase/8.10.0/firebase-app-check.js"></script>
+    <script src="/__/firebase/8.10.0/firebase-firestore.js"></script>
+    <script src="/__/firebase/8.10.0/firebase-auth.js"></script>
+    <script src="/__/firebase/8.10.0/firebase-storage.js"></script>
+    <script src="/__/firebase/init.js"></script>
+    <script src="script/updateBridalView.js"></script>
+</html>

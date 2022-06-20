@@ -1,0 +1,712 @@
+.highlightedText {
+  font-weight: 900;
+  color: #e29578;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+.contactBoxClicked {
+  background-color: #e29578;
+  color: #f5f5f0;
+}
+
+.bookingPageView {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+}
+
+.bookingPageView .title {
+  overflow: hidden;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  text-align: center;
+  letter-spacing: 5px;
+  vertical-align: middle;
+  width: 100%;
+  margin-top: 85px;
+  margin-bottom: 25px;
+}
+
+.bookingPageView .title .back {
+  -webkit-transition: scale 0.5s ease;
+  transition: scale 0.5s ease;
+}
+
+.bookingPageView .title h3 {
+  text-transform: uppercase;
+  font-size: 2em;
+}
+
+.bookingPageView .bookingContainer {
+  width: 100vw;
+  min-height: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.bookingPageView .bookingContainer .bookingTable {
+  display: -ms-grid;
+  display: grid;
+  grid-template: "a a" "b c";
+}
+
+.bookingPageView .bookingContainer .bookingTable .header {
+  grid-area: a;
+  overflow: hidden;
+}
+
+.bookingPageView .bookingContainer .bookingTable .header p {
+  margin-top: 0.5em;
+  margin-left: 2.5em;
+  margin-right: 2.5em;
+  text-align: center;
+}
+
+.bookingPageView .bookingContainer .bookingTable .header a {
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  color: #e29578;
+}
+
+.bookingPageView .bookingContainer .bookingTable .header a:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #e29578;
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  transition: -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+}
+
+.bookingPageView .bookingContainer .bookingTable .header a:hover:after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+}
+
+.bookingPageView .bookingContainer .bookingTable .contactBox {
+  opacity: 0;
+  width: 15em;
+  padding: 1em 1em;
+  margin: 1em auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: solid 3px;
+  border-radius: 7px;
+  text-align: center;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.bookingPageView .bookingContainer .bookingTable .contactBox h3 {
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+}
+
+.bookingPageView .bookingContainer .bookingTable .contactBox h6 {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.bookingPageView .bookingContainer .bookingTable .contactBox:hover h6 {
+  font-size: 0.7em;
+  color: #e29578;
+}
+
+.bookingPageView .bookingContainer .bookingTable .emailBox {
+  grid-area: b;
+}
+
+.bookingPageView .bookingContainer .bookingTable .phoneBox {
+  grid-area: c;
+}
+
+.bookingPageView .bookingContainer .bookingUI {
+  opacity: 0;
+  position: relative;
+  margin: 2em;
+  width: 30vw;
+  min-height: 90vh;
+  background-color: #f5f5f0;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07), 0 4px 8px rgba(0, 0, 0, 0.07), 0 8px 16px rgba(0, 0, 0, 0.07), 0 16px 32px rgba(0, 0, 0, 0.07), 0 32px 64px rgba(0, 0, 0, 0.07);
+          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07), 0 4px 8px rgba(0, 0, 0, 0.07), 0 8px 16px rgba(0, 0, 0, 0.07), 0 16px 32px rgba(0, 0, 0, 0.07), 0 32px 64px rgba(0, 0, 0, 0.07);
+}
+
+.bookingPageView .bookingContainer .bookingUI h3 {
+  padding: 0.5em;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: xx-large;
+}
+
+.bookingPageView .bookingContainer .bookingUI p {
+  margin: 0.5em;
+  font-size: large;
+}
+
+.bookingPageView .bookingContainer .bookingUI #transitionCover {
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 0;
+  background-color: #e29578;
+}
+
+.bookingPageView .bookingContainer .bookingUI #booked {
+  color: #f5f5f0;
+  background-color: #e29578;
+  position: absolute;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 1em;
+}
+
+.bookingPageView .bookingContainer .bookingUI #booked #details {
+  padding-left: 3em;
+  padding-right: 3em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: start;
+  width: 100%;
+  height: 40%;
+}
+
+.bookingPageView .bookingContainer .bookingUI #booked .designBtn {
+  color: #f5f5f0;
+}
+
+.bookingPageView .bookingContainer .bookingUI #booked .designBtn:hover {
+  border-color: #f5f5f0;
+  color: #e29578;
+  -webkit-box-shadow: inset 0 -2.3em 0 0 #f5f5f0;
+          box-shadow: inset 0 -2.3em 0 0 #f5f5f0;
+}
+
+.bookingPageView .bookingContainer .bookingUI #booked #resign {
+  position: absolute;
+  bottom: 30%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 7em;
+  height: 3em;
+  border-radius: 2em;
+  border: none;
+  text-transform: uppercase;
+  color: #e29578;
+  font-weight: bold;
+}
+
+.bookingPageView .bookingContainer .bookingUI #booked h5 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5em;
+  text-align: justify;
+}
+
+.bookingPageView .bookingContainer .bookingUI #userInfo {
+  padding: 1em;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.bookingPageView .bookingContainer .bookingUI #userInfo input {
+  font-size: medium;
+  width: 95%;
+  margin: 1em;
+  padding: 0.3em;
+  outline: 0;
+  border-width: 0 0 2px;
+  background-color: transparent;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.bookingPageView .bookingContainer .bookingUI #userInfo input:focus {
+  color: #e29578;
+  border-color: #e29578;
+}
+
+.bookingPageView .bookingContainer .bookingUI #userInfo button {
+  text-transform: uppercase;
+  background-color: transparent;
+  border: solid 2px;
+  font-size: large;
+  margin: 3em;
+  padding: 0.5em 1em;
+  -webkit-transition: all 0.325s ease-out;
+  transition: all 0.325s ease-out;
+}
+
+.bookingPageView .bookingContainer .bookingUI #userInfo button:hover {
+  border-color: #e29578;
+  color: #f5f5f0;
+  -webkit-box-shadow: inset 0 -2.3em 0 0 #e29578;
+          box-shadow: inset 0 -2.3em 0 0 #e29578;
+}
+
+.bookingPageView .bookingContainer .bookingUI #userInfo h5 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5em;
+  text-align: justify;
+}
+
+.bookingPageView .bookingContainer .bookingUI #datePicker {
+  width: 100%;
+  height: 100%;
+  padding: 1em;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.bookingPageView .bookingContainer .bookingUI #datePicker #monthView {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+}
+
+.bookingPageView .bookingContainer .bookingUI #datePicker #monthView p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.bookingPageView .bookingContainer .bookingUI #datePicker #monthView button {
+  font-size: larger;
+  background-color: transparent;
+  border: none;
+  -webkit-transition: all 0.325s ease-out;
+  transition: all 0.325s ease-out;
+}
+
+.bookingPageView .bookingContainer .bookingUI #datePicker #monthView button:hover:enabled {
+  color: #e29578;
+}
+
+.bookingPageView .bookingContainer .bookingUI #datePicker #calendar {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[7];
+      grid-template-columns: repeat(7, 1fr);
+}
+
+.bookingPageView .bookingContainer .bookingUI #datePicker #calendar div {
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  width: 100%;
+  min-height: 3em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: transparent;
+}
+
+.bookingPageView .bookingContainer .bookingUI #datePicker #calendar .hovered {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  background-color: #e29578;
+  color: #f5f5f0;
+}
+
+.bookingPageView .bookingContainer .bookingUI #timePicker {
+  display: none;
+  height: 100%;
+  padding: 1em;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.bookingPageView .bookingContainer .bookingUI #timePicker #clock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.bookingPageView .bookingContainer .bookingUI #timePicker #clock button {
+  padding: 0.3em;
+  height: 100%;
+  background-color: #f5f5f0;
+  border: solid 1px #151515;
+  -webkit-transition: all 0.325s ease-out;
+  transition: all 0.325s ease-out;
+  color: black;
+}
+
+.bookingPageView .bookingContainer .bookingUI #timePicker #clock button:hover:enabled {
+  border-color: #e29578;
+  color: #f5f5f0;
+  -webkit-box-shadow: inset 0 -1.8em 0 0 #e29578;
+          box-shadow: inset 0 -1.8em 0 0 #e29578;
+}
+
+.bookingPageView .bookingContainer .bookingUI #timePicker #clock button:disabled {
+  background-color: #151515;
+  color: #f5f5f0;
+}
+
+.bookingPageView .bookingContainer .bookingUI #confirmation {
+  padding: 1em;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.bookingPageView .bookingContainer .bookingUI #confirmation #displayAppointment {
+  padding: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: start;
+  width: 100%;
+  height: 40%;
+}
+
+.bookingPageView .bookingContainer .bookingUI #confirmation #confirmBtn {
+  text-transform: uppercase;
+  background-color: transparent;
+  border: solid 2px;
+  font-size: large;
+  margin: 3em;
+  padding: 0.5em 1em;
+  -webkit-transition: all 0.325s ease-out;
+  transition: all 0.325s ease-out;
+}
+
+.bookingPageView .bookingContainer .bookingUI #confirmation #confirmBtn:hover:enabled {
+  border-color: #e29578;
+  color: #f5f5f0;
+  -webkit-box-shadow: inset 0 -2.3em 0 0 #e29578;
+          box-shadow: inset 0 -2.3em 0 0 #e29578;
+}
+
+.bookingPageView .bookingContainer .bookingUI #confirmation #confirmBtn:disabled {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  background-color: #e29578;
+  color: #f5f5f0;
+}
+
+.bookingPageView .bookingContainer .bookingUI #thankYou {
+  text-align: justify;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #e29578;
+  color: #f5f5f0;
+  padding: 3em;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.bookingPageView .bookingContainer .bookingUI #unAvailable {
+  padding: 1em;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.bookingPageView .bookingContainer .bookingUI #unAvailable button {
+  text-transform: uppercase;
+  background-color: transparent;
+  border: solid 2px;
+  font-size: large;
+  margin: 1em;
+  padding: 0.5em 1em;
+  -webkit-transition: all 0.325s ease-out;
+  transition: all 0.325s ease-out;
+}
+
+.bookingPageView .bookingContainer .bookingUI #unAvailable button:hover {
+  border-color: #e29578;
+  color: #f5f5f0;
+  -webkit-box-shadow: inset 0 -2.3em 0 0 #e29578;
+          box-shadow: inset 0 -2.3em 0 0 #e29578;
+}
+
+.bookingPageView .bookingContainer .bookingUI #BookingBack {
+  z-index: 11;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: xx-large;
+  padding: 0em 0.5em;
+  background-color: transparent;
+  border: none;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.bookingPageView .bookingContainer .bookingUI #BookingBack:hover {
+  color: #e29578;
+}
+
+.designBtn {
+  text-transform: uppercase;
+  background-color: transparent;
+  border: solid 2px;
+  font-size: large;
+  margin: 1em;
+  padding: 0.5em 1em;
+  -webkit-transition: all 0.325s ease-out;
+  transition: all 0.325s ease-out;
+}
+
+.designBtn:hover {
+  border-color: #e29578;
+  color: #f5f5f0;
+  -webkit-box-shadow: inset 0 -2.3em 0 0 #e29578;
+          box-shadow: inset 0 -2.3em 0 0 #e29578;
+}
+
+@media screen and (min-width: 768px) {
+  .bookingPageView .bookingContainer .bookingUI {
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    -webkit-transform: perspective(1000px);
+            transform: perspective(1000px);
+  }
+  .bookingPageView .bookingContainer .bookingUI h3 {
+    -webkit-transform: translateZ(30px);
+            transform: translateZ(30px);
+  }
+  .bookingPageView .bookingContainer .bookingUI p {
+    -webkit-transform: translateZ(50px);
+            transform: translateZ(50px);
+  }
+  .bookingPageView .bookingContainer .bookingUI #transitionCover {
+    -webkit-transform: translateZ(100px);
+            transform: translateZ(100px);
+  }
+  .bookingPageView .bookingContainer .bookingUI #booked #resign {
+    -webkit-transform: translateX(-50%) translateZ(60px);
+            transform: translateX(-50%) translateZ(60px);
+  }
+  .bookingPageView .bookingContainer .bookingUI #booked h5 {
+    -webkit-transform: translateZ(20px);
+            transform: translateZ(20px);
+  }
+  .bookingPageView .bookingContainer .bookingUI #userInfo input {
+    -webkit-transform: translateZ(55px);
+            transform: translateZ(55px);
+  }
+  .bookingPageView .bookingContainer .bookingUI #userInfo input:focus {
+    -webkit-transform: translateZ(65px);
+            transform: translateZ(65px);
+  }
+  .bookingPageView .bookingContainer .bookingUI #userInfo button {
+    -webkit-transform: translateZ(60px);
+            transform: translateZ(60px);
+  }
+  .bookingPageView .bookingContainer .bookingUI #userInfo h5 {
+    -webkit-transform: translateZ(20px);
+            transform: translateZ(20px);
+  }
+  .bookingPageView .bookingContainer .bookingUI #datePicker #monthView {
+    -webkit-transform: translateZ(50px);
+            transform: translateZ(50px);
+  }
+  .bookingPageView .bookingContainer .bookingUI #datePicker #monthView button:hover:enabled {
+    -webkit-transform: translateZ(55px);
+            transform: translateZ(55px);
+  }
+  .bookingPageView .bookingContainer .bookingUI #datePicker #calendar {
+    -webkit-transform: translateZ(60px);
+            transform: translateZ(60px);
+  }
+  .bookingPageView .bookingContainer .bookingUI #datePicker #calendar .hovered {
+    -webkit-transform: translateZ(65px);
+            transform: translateZ(65px);
+  }
+  .bookingPageView .bookingContainer .bookingUI #timePicker #clock button:enabled {
+    -webkit-transform: translateZ(55px);
+            transform: translateZ(55px);
+  }
+  .bookingPageView .bookingContainer .bookingUI #timePicker #clock button:hover:enabled {
+    -webkit-transform: translateZ(65px);
+            transform: translateZ(65px);
+  }
+  .bookingPageView .bookingContainer .bookingUI #confirmation #displayAppointment {
+    -webkit-transform: translateZ(60px);
+            transform: translateZ(60px);
+  }
+  .bookingPageView .bookingContainer .bookingUI #confirmation #confirmBtn {
+    -webkit-transform: translateZ(65px);
+            transform: translateZ(65px);
+  }
+  .bookingPageView .bookingContainer .bookingUI #confirmation #confirmBtn:hover:enabled {
+    -webkit-transform: translateZ(70px);
+            transform: translateZ(70px);
+  }
+  .bookingPageView .bookingContainer .bookingUI #unAvailable button {
+    -webkit-transform: translateZ(60px);
+            transform: translateZ(60px);
+  }
+  .bookingPageView .bookingContainer .bookingUI #unAvailable button:hover {
+    -webkit-transform: translateZ(65px);
+            transform: translateZ(65px);
+  }
+  .bookingPageView .bookingContainer .bookingUI #BookingBack {
+    -webkit-transform: translateX(-50%) translateZ(110px);
+            transform: translateX(-50%) translateZ(110px);
+  }
+  .designBtn {
+    -webkit-transform: translateZ(50px);
+            transform: translateZ(50px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .bookingPageView .bookingContainer .bookingTable {
+    grid-template: "a" "b" "c";
+  }
+  .bookingPageView .bookingContainer .bookingTable div {
+    margin: 1em auto !important;
+  }
+  .bookingPageView .bookingContainer .bookingUI {
+    width: 90vw;
+  }
+  .bookingPageView .bookingContainer .bookingUI #booked #details {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  .bookingPageView .bookingContainer .bookingUI #userInfo button {
+    margin: 5em;
+  }
+}
+
+.invalid {
+  color: red;
+  border-color: red !important;
+}
+/*# sourceMappingURL=bookingPage.css.map */

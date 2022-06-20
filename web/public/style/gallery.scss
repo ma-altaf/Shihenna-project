@@ -1,0 +1,206 @@
+@import "./variables";
+
+.galleryPage {
+    font-family: "Varela Round", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .title {
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-content: center;
+        text-align: center;
+        letter-spacing: 5px;
+        vertical-align: middle;
+        width: 100%;
+        height: 30px;
+        margin-top: 85px;
+        margin-bottom: 85px;
+        .back {
+            transition: scale 0.5s ease;
+        }
+        h3 {
+            text-transform: uppercase;
+            font-size: 2em;
+        }
+    }
+
+    .category {
+        margin-bottom: 3vh;
+        overflow: hidden;
+        min-height: 5vh;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        text-transform: uppercase;
+
+        ul {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        li {
+            overflow: hidden;
+            list-style: none;
+            color: $secondaryColor;
+            margin-left: 1em;
+            margin-right: 1em;
+            .underline {
+                width: 100%;
+                height: 2px;
+                background-color: black;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            letter-spacing: 3px;
+            font-size: 14px;
+            color: $secondaryColor;
+            transition: all 0.3s;
+
+            &:hover {
+                font-size: 15px;
+                font-weight: bolder;
+                color: $accentColor;
+            }
+        }
+    }
+
+    .gallery {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 80vh;
+
+        .casual {
+            width: 50%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: masonry;
+            gap: 1em;
+            overflow: hidden;
+            .image {
+                overflow: hidden;
+                width: 100%;
+                height: 100%;
+
+                img {
+                    transform: translateX(-100%);
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+        .bridal {
+            width: 60%;
+            display: grid;
+            grid-template-rows: 3;
+            gap: 1em;
+
+            .image {
+                overflow: hidden;
+                width: 100%;
+                height: 100%;
+
+                img {
+                    transform: translateX(-101%);
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+        .others {
+            width: 50%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: masonry;
+            gap: 1em;
+            overflow: hidden;
+            .image {
+                overflow: hidden;
+                width: 100%;
+                height: 100%;
+
+                img {
+                    opacity: 0;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+
+    .footer {
+        width: 100vw;
+        min-height: 12vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .footerNav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: translateX(-20px);
+            .pageNav {
+                border: none;
+                background-color: $primaryColor;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                font-size: 14px;
+                color: $secondaryColor;
+                margin: 1.5em;
+                padding-left: 0.5em;
+                padding-right: 0.5em;
+                transition: all 0.3s;
+
+                &:hover {
+                    font-weight: bolder;
+                    font-size: 16px;
+                    letter-spacing: 2px;
+                    color: $accentColor;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $mobileSize) {
+    .galleryPage {
+        .category {
+            a {
+                &:hover {
+                    font-size: inherit;
+                    font-weight: inherit;
+                    color: inherit;
+                }
+            }
+        }
+        .gallery {
+            .casual {
+                width: 90%;
+            }
+            .bridal {
+                width: 90%;
+            }
+            .others {
+                width: 90%;
+            }
+        }
+
+        .footer .footerNav .pageNav {
+            &:hover {
+                font-weight: inherit;
+                font-size: inherit;
+                letter-spacing: inherit;
+                color: inherit;
+            }
+        }
+    }
+}
